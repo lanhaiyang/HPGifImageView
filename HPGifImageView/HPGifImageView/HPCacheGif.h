@@ -32,6 +32,12 @@
 @property (nonatomic, strong, readonly) NSData *data;
 
 
+/**
+ 判断某个文件是否有缓存
+
+ @param gifName 文件名
+ @return 是否有缓存
+ */
 -(BOOL)hp_getCacheWithGifName:(NSString *)gifName;
 
 @property(nonatomic,strong,readonly) dispatch_queue_t queue;
