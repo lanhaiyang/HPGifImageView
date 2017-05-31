@@ -15,6 +15,15 @@
 		657FC68A1EDA7C47009E8EA4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 657FC6881EDA7C47009E8EA4 /* LaunchScreen.storyboard */; };
 		657FC6951EDA7C48009E8EA4 /* HPGifImageViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 657FC6941EDA7C48009E8EA4 /* HPGifImageViewTests.m */; };
 		657FC6A01EDA7C48009E8EA4 /* HPGifImageViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 657FC69F1EDA7C48009E8EA4 /* HPGifImageViewUITests.m */; };
+		657FC6C81EDA820B009E8EA4 /* HPCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 657FC6BF1EDA820B009E8EA4 /* HPCache.m */; };
+		657FC6C91EDA820B009E8EA4 /* HPCacheGif.m in Sources */ = {isa = PBXBuildFile; fileRef = 657FC6C11EDA820B009E8EA4 /* HPCacheGif.m */; };
+		657FC6CA1EDA820B009E8EA4 /* HPCacheImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 657FC6C31EDA820B009E8EA4 /* HPCacheImage.m */; };
+		657FC6CB1EDA820B009E8EA4 /* HPGifImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 657FC6C51EDA820B009E8EA4 /* HPGifImageView.m */; };
+		657FC6CC1EDA820B009E8EA4 /* HPImageCompress.m in Sources */ = {isa = PBXBuildFile; fileRef = 657FC6C71EDA820B009E8EA4 /* HPImageCompress.m */; };
+		657FC6D11EDA824E009E8EA4 /* kissAnimation.gif in Resources */ = {isa = PBXBuildFile; fileRef = 657FC6CE1EDA824E009E8EA4 /* kissAnimation.gif */; };
+		657FC6D21EDA824E009E8EA4 /* Qmonkey.gif in Resources */ = {isa = PBXBuildFile; fileRef = 657FC6CF1EDA824E009E8EA4 /* Qmonkey.gif */; };
+		657FC6D31EDA824E009E8EA4 /* runCar.gif in Resources */ = {isa = PBXBuildFile; fileRef = 657FC6D01EDA824E009E8EA4 /* runCar.gif */; };
+		657FC6D61EDA91BF009E8EA4 /* HPGifCacheManage.m in Sources */ = {isa = PBXBuildFile; fileRef = 657FC6D51EDA91BF009E8EA4 /* HPGifCacheManage.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +60,21 @@
 		657FC69B1EDA7C48009E8EA4 /* HPGifImageViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HPGifImageViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		657FC69F1EDA7C48009E8EA4 /* HPGifImageViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HPGifImageViewUITests.m; sourceTree = "<group>"; };
 		657FC6A11EDA7C48009E8EA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		657FC6BE1EDA820B009E8EA4 /* HPCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPCache.h; sourceTree = "<group>"; };
+		657FC6BF1EDA820B009E8EA4 /* HPCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPCache.m; sourceTree = "<group>"; };
+		657FC6C01EDA820B009E8EA4 /* HPCacheGif.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPCacheGif.h; sourceTree = "<group>"; };
+		657FC6C11EDA820B009E8EA4 /* HPCacheGif.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPCacheGif.m; sourceTree = "<group>"; };
+		657FC6C21EDA820B009E8EA4 /* HPCacheImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPCacheImage.h; sourceTree = "<group>"; };
+		657FC6C31EDA820B009E8EA4 /* HPCacheImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPCacheImage.m; sourceTree = "<group>"; };
+		657FC6C41EDA820B009E8EA4 /* HPGifImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPGifImageView.h; sourceTree = "<group>"; };
+		657FC6C51EDA820B009E8EA4 /* HPGifImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPGifImageView.m; sourceTree = "<group>"; };
+		657FC6C61EDA820B009E8EA4 /* HPImageCompress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPImageCompress.h; sourceTree = "<group>"; };
+		657FC6C71EDA820B009E8EA4 /* HPImageCompress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPImageCompress.m; sourceTree = "<group>"; };
+		657FC6CE1EDA824E009E8EA4 /* kissAnimation.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = kissAnimation.gif; sourceTree = "<group>"; };
+		657FC6CF1EDA824E009E8EA4 /* Qmonkey.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Qmonkey.gif; sourceTree = "<group>"; };
+		657FC6D01EDA824E009E8EA4 /* runCar.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = runCar.gif; sourceTree = "<group>"; };
+		657FC6D41EDA91BF009E8EA4 /* HPGifCacheManage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPGifCacheManage.h; sourceTree = "<group>"; };
+		657FC6D51EDA91BF009E8EA4 /* HPGifCacheManage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPGifCacheManage.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +125,7 @@
 		657FC6791EDA7C47009E8EA4 /* HPGifImageView */ = {
 			isa = PBXGroup;
 			children = (
+				657FC6BD1EDA820B009E8EA4 /* HPGifImageView */,
 				657FC67D1EDA7C47009E8EA4 /* AppDelegate.h */,
 				657FC67E1EDA7C47009E8EA4 /* AppDelegate.m */,
 				657FC6801EDA7C47009E8EA4 /* ViewController.h */,
@@ -109,6 +134,7 @@
 				657FC6861EDA7C47009E8EA4 /* Assets.xcassets */,
 				657FC6881EDA7C47009E8EA4 /* LaunchScreen.storyboard */,
 				657FC68B1EDA7C47009E8EA4 /* Info.plist */,
+				657FC6CD1EDA824E009E8EA4 /* gifAssets */,
 				657FC67A1EDA7C47009E8EA4 /* Supporting Files */,
 			);
 			path = HPGifImageView;
@@ -138,6 +164,35 @@
 				657FC6A11EDA7C48009E8EA4 /* Info.plist */,
 			);
 			path = HPGifImageViewUITests;
+			sourceTree = "<group>";
+		};
+		657FC6BD1EDA820B009E8EA4 /* HPGifImageView */ = {
+			isa = PBXGroup;
+			children = (
+				657FC6BE1EDA820B009E8EA4 /* HPCache.h */,
+				657FC6BF1EDA820B009E8EA4 /* HPCache.m */,
+				657FC6C01EDA820B009E8EA4 /* HPCacheGif.h */,
+				657FC6C11EDA820B009E8EA4 /* HPCacheGif.m */,
+				657FC6C21EDA820B009E8EA4 /* HPCacheImage.h */,
+				657FC6C31EDA820B009E8EA4 /* HPCacheImage.m */,
+				657FC6C41EDA820B009E8EA4 /* HPGifImageView.h */,
+				657FC6C51EDA820B009E8EA4 /* HPGifImageView.m */,
+				657FC6C61EDA820B009E8EA4 /* HPImageCompress.h */,
+				657FC6C71EDA820B009E8EA4 /* HPImageCompress.m */,
+				657FC6D41EDA91BF009E8EA4 /* HPGifCacheManage.h */,
+				657FC6D51EDA91BF009E8EA4 /* HPGifCacheManage.m */,
+			);
+			path = HPGifImageView;
+			sourceTree = "<group>";
+		};
+		657FC6CD1EDA824E009E8EA4 /* gifAssets */ = {
+			isa = PBXGroup;
+			children = (
+				657FC6CE1EDA824E009E8EA4 /* kissAnimation.gif */,
+				657FC6CF1EDA824E009E8EA4 /* Qmonkey.gif */,
+				657FC6D01EDA824E009E8EA4 /* runCar.gif */,
+			);
+			path = gifAssets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,9 +301,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				657FC6D21EDA824E009E8EA4 /* Qmonkey.gif in Resources */,
 				657FC68A1EDA7C47009E8EA4 /* LaunchScreen.storyboard in Resources */,
 				657FC6871EDA7C47009E8EA4 /* Assets.xcassets in Resources */,
+				657FC6D31EDA824E009E8EA4 /* runCar.gif in Resources */,
 				657FC6851EDA7C47009E8EA4 /* Main.storyboard in Resources */,
+				657FC6D11EDA824E009E8EA4 /* kissAnimation.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,9 +331,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				657FC6CA1EDA820B009E8EA4 /* HPCacheImage.m in Sources */,
+				657FC6C81EDA820B009E8EA4 /* HPCache.m in Sources */,
 				657FC6821EDA7C47009E8EA4 /* ViewController.m in Sources */,
+				657FC6CC1EDA820B009E8EA4 /* HPImageCompress.m in Sources */,
+				657FC6C91EDA820B009E8EA4 /* HPCacheGif.m in Sources */,
+				657FC6D61EDA91BF009E8EA4 /* HPGifCacheManage.m in Sources */,
 				657FC67F1EDA7C47009E8EA4 /* AppDelegate.m in Sources */,
 				657FC67C1EDA7C47009E8EA4 /* main.m in Sources */,
+				657FC6CB1EDA820B009E8EA4 /* HPGifImageView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,6 +489,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = HPGifImageView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = hepeng.HPGifImageView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -436,6 +501,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = HPGifImageView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = hepeng.HPGifImageView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -507,6 +573,7 @@
 				657FC6A61EDA7C48009E8EA4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		657FC6A71EDA7C48009E8EA4 /* Build configuration list for PBXNativeTarget "HPGifImageViewTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +582,7 @@
 				657FC6A91EDA7C48009E8EA4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		657FC6AA1EDA7C48009E8EA4 /* Build configuration list for PBXNativeTarget "HPGifImageViewUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +591,7 @@
 				657FC6AC1EDA7C48009E8EA4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
