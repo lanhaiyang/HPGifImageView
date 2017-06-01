@@ -246,7 +246,8 @@
 {
     NSString *dataPath = [self cachePathWithUrl:cacheName];
     // 读取data
-    NSData *data = [NSData dataWithContentsOfFile:dataPath];
+//    NSData *data = [NSData dataWithContentsOfFile:dataPath];
+    NSData *data=[NSData dataWithContentsOfFile:dataPath options:NSDataReadingMappedIfSafe error:nil];
     
     return data;
 }

@@ -118,11 +118,12 @@
         UIImage *image=[UIImage imageWithData:[HPCache readWithcacheName:gifName]];
         
         if (HPGifCache.memoryWarningStatus==YES) {
-            self.showImage=[HPImageCompress hp_imageCompressForSize:image targetSize:CGSizeMake(self.bounds.size.width, self.bounds.size.height)];
+            image=[HPImageCompress hp_imageCompressForSize:image targetSize:CGSizeMake(self.bounds.size.width, self.bounds.size.height)];
+            self.showImage=[HPGifImageView cgImageWithShow:image];
         }
         else
         {
-            self.showImage=image;
+            self.showImage=[HPGifImageView cgImageWithShow:image];
         }
         image=nil;
         
@@ -149,9 +150,8 @@
 
 -(void)displayLayer:(CALayer *)layer
 {
-    UIImage *showImage=[HPGifImageView cgImageWithShow:self.showImage];
-    self.layer.contents=(__bridge id _Nullable)(showImage.CGImage);
-    showImage=nil;
+    self.layer.contents=(__bridge id _Nullable)(self.showImage.CGImage);
+    self.showImage=nil;
 }
 
 +(UIImage *)cgImageWithShow:(UIImage *)image

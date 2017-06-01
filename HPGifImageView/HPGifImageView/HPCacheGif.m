@@ -65,7 +65,9 @@
 -(void)hp_cacheWithGifName:(NSString *)gifName
 {
     NSURL *gifUrl=[[NSBundle mainBundle] URLForResource:gifName withExtension:@"gif"];
-    [self hp_cacheWithGifData:[NSData dataWithContentsOfURL:gifUrl]];
+    NSData *data=[NSData dataWithContentsOfURL:gifUrl options:NSDataReadingMappedIfSafe error:nil];
+    
+    [self hp_cacheWithGifData:data];
 }
 
 -(void)hp_cacheWithGifData:( NSData *)data
