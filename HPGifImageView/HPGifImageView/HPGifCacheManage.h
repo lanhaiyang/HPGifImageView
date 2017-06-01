@@ -28,6 +28,8 @@ typedef void (^UpdateBlock)();
 @property(nonatomic,assign) BOOL memoryWarningStatus;
 
 
+@property(nonatomic,strong) dispatch_queue_t manageQueu;
+
 /**
  更新状态
 

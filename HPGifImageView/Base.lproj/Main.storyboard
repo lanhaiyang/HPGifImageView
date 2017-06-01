@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1421" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +21,76 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="4DI-9K-emq">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="0.0" id="F6r-dW-5jo">
+                                    <size key="itemSize" width="66" height="94"/>
+                                    <size key="headerReferenceSize" width="50" height="144"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="10" minY="10" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GifCollectionViewCell" id="LN2-RZ-iny" customClass="GifCollectionViewCell">
+                                        <rect key="frame" x="10" y="154" width="66" height="94"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="66" height="94"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wfn-va-3pC" customClass="HPGifImageView">
+                                                    <rect key="frame" x="0.0" y="0.0" width="66" height="94"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="wfn-va-3pC" firstAttribute="leading" secondItem="LN2-RZ-iny" secondAttribute="leading" id="4DM-AE-RMF"/>
+                                            <constraint firstAttribute="bottom" secondItem="wfn-va-3pC" secondAttribute="bottom" id="CNi-DI-dl4"/>
+                                            <constraint firstAttribute="trailing" secondItem="wfn-va-3pC" secondAttribute="trailing" id="fgm-28-gPS"/>
+                                            <constraint firstItem="wfn-va-3pC" firstAttribute="top" secondItem="LN2-RZ-iny" secondAttribute="top" id="u4Y-kZ-Jup"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="gifImageView" destination="wfn-va-3pC" id="a7n-Bt-CJS"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GifHeadeView" id="pQp-ij-T35" customClass="GifCollectionReusableView">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="144"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9Ml-Z5-16R" customClass="HPGifImageView">
+                                            <rect key="frame" x="18" y="8" width="339" height="128"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="9Ml-Z5-16R" firstAttribute="top" secondItem="pQp-ij-T35" secondAttribute="topMargin" id="4Zt-xE-xb6"/>
+                                        <constraint firstItem="9Ml-Z5-16R" firstAttribute="leading" secondItem="pQp-ij-T35" secondAttribute="leadingMargin" constant="10" id="ESQ-nm-vkw"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="9Ml-Z5-16R" secondAttribute="trailing" constant="10" id="eNB-2u-fkp"/>
+                                        <constraint firstItem="9Ml-Z5-16R" firstAttribute="bottom" secondItem="pQp-ij-T35" secondAttribute="bottomMargin" id="oPx-ZT-Ofo"/>
+                                    </constraints>
+                                    <connections>
+                                        <outlet property="gifHeadeView" destination="9Ml-Z5-16R" id="cj1-ur-QVC"/>
+                                    </connections>
+                                </collectionReusableView>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="4DI-9K-emq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="5Cx-QE-Kj1"/>
+                            <constraint firstItem="4DI-9K-emq" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="HyP-yg-OMj"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="4DI-9K-emq" secondAttribute="bottom" id="Uai-p9-ubC"/>
+                            <constraint firstAttribute="trailing" secondItem="4DI-9K-emq" secondAttribute="trailing" id="fUl-p5-esm"/>
+                        </constraints>
                     </view>
+                    <value key="contentSizeForViewInPopover" type="size" width="375" height="667"/>
+                    <connections>
+                        <outlet property="GifCollectionView" destination="4DI-9K-emq" id="4mo-44-Dma"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-79.200000000000003" y="137.18140929535232"/>
         </scene>
     </scenes>
 </document>

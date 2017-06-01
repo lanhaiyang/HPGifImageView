@@ -17,8 +17,6 @@
 
 @property(nonatomic,strong) UpdateBlock hpDateBlock;
 
-@property(nonatomic,strong) dispatch_queue_t manageQueu;
-
 @end
 
 @implementation HPGifCacheManage
@@ -45,11 +43,17 @@
         return;
     }
     
-    _manageQueu=dispatch_queue_create("HPGifCacheManage.queue.gif", NULL);
-    
     self.cadisplayCacheManage = [CADisplayLink displayLinkWithTarget:self selector:@selector(updateAnimationGif)];
     self.cadisplayCacheManage.paused = NO;
     [self.cadisplayCacheManage addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
+}
+
+-(dispatch_queue_t)manageQueu
+{
+    if (_manageQueu==nil) {
+        _manageQueu=dispatch_queue_create("HPGifCacheManage.queue.gif", NULL);
+    }
+    return _manageQueu;
 }
 
 -(void)updateAnimationGif
@@ -61,7 +65,7 @@
     }
     
     //管理缓存 缓存太大
-    dispatch_async(_manageQueu, ^{
+    dispatch_async(self.manageQueu, ^{
         
         NSDictionary *dic=[HPCacehObject.cacheFileInformation objectForKey:ManageSaveFile_KeyFileName_ValueFileSize];
         

@@ -10,6 +10,7 @@
 #import "HPCache.h"
 #import <ImageIO/ImageIO.h>
 #import "HPCacheImage.h"
+#import "HPGifCacheManage.h"
 
 @interface HPCacheGif ()
 
@@ -78,10 +79,7 @@
 
 -(void)hp_cacheWithGifData:( NSData *)data acheFileName:(NSURL *)fileName
 {
-    if (_queue==nil) {
-        _queue = dispatch_queue_create("hp.cacheQueue.gif", NULL);
-    }
-    dispatch_async(_queue, ^{
+    dispatch_async(HPGifCache.manageQueu, ^{
         
         [self hp_animationGifWith:data acheFileName:fileName];
         

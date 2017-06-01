@@ -40,8 +40,6 @@
  */
 -(BOOL)hp_getCacheWithGifName:(NSString *)gifName;
 
-@property(nonatomic,strong,readonly) dispatch_queue_t queue;
-
 
 /**
  当前gif的帧数
