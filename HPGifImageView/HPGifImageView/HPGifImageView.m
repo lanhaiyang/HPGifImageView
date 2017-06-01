@@ -149,14 +149,9 @@
 
 -(void)displayLayer:(CALayer *)layer
 {
-    
-    dispatch_async(HPGifCache.manageQueu, ^{
-        __block UIImage *showImage=[HPGifImageView cgImageWithShow:self.showImage];
-        dispatch_async(dispatch_get_main_queue(), ^{
-            self.layer.contents=(__bridge id _Nullable)(showImage.CGImage);
-            showImage=nil;
-        });
-    });
+    UIImage *showImage=[HPGifImageView cgImageWithShow:self.showImage];
+    self.layer.contents=(__bridge id _Nullable)(showImage.CGImage);
+    showImage=nil;
 }
 
 +(UIImage *)cgImageWithShow:(UIImage *)image

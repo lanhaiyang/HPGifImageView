@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		653D7B991EDF02990058784A /* GifCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 653D7B981EDF02990058784A /* GifCollectionReusableView.m */; };
-		653D7B9C1EDF02E40058784A /* GifCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 653D7B9B1EDF02E40058784A /* GifCollectionViewCell.m */; };
 		657FC67C1EDA7C47009E8EA4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 657FC67B1EDA7C47009E8EA4 /* main.m */; };
 		657FC67F1EDA7C47009E8EA4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 657FC67E1EDA7C47009E8EA4 /* AppDelegate.m */; };
 		657FC6821EDA7C47009E8EA4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 657FC6811EDA7C47009E8EA4 /* ViewController.m */; };
@@ -46,10 +44,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		653D7B971EDF02990058784A /* GifCollectionReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GifCollectionReusableView.h; sourceTree = "<group>"; };
-		653D7B981EDF02990058784A /* GifCollectionReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GifCollectionReusableView.m; sourceTree = "<group>"; };
-		653D7B9A1EDF02E40058784A /* GifCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GifCollectionViewCell.h; sourceTree = "<group>"; };
-		653D7B9B1EDF02E40058784A /* GifCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GifCollectionViewCell.m; sourceTree = "<group>"; };
 		657FC6771EDA7C47009E8EA4 /* HPGifImageView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HPGifImageView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		657FC67B1EDA7C47009E8EA4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		657FC67D1EDA7C47009E8EA4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -136,10 +130,6 @@
 				657FC67E1EDA7C47009E8EA4 /* AppDelegate.m */,
 				657FC6801EDA7C47009E8EA4 /* ViewController.h */,
 				657FC6811EDA7C47009E8EA4 /* ViewController.m */,
-				653D7B971EDF02990058784A /* GifCollectionReusableView.h */,
-				653D7B981EDF02990058784A /* GifCollectionReusableView.m */,
-				653D7B9A1EDF02E40058784A /* GifCollectionViewCell.h */,
-				653D7B9B1EDF02E40058784A /* GifCollectionViewCell.m */,
 				657FC6831EDA7C47009E8EA4 /* Main.storyboard */,
 				657FC6861EDA7C47009E8EA4 /* Assets.xcassets */,
 				657FC6881EDA7C47009E8EA4 /* LaunchScreen.storyboard */,
@@ -272,6 +262,7 @@
 				TargetAttributes = {
 					657FC6761EDA7C47009E8EA4 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = P35S4B7K46;
 						ProvisioningStyle = Automatic;
 					};
 					657FC68F1EDA7C48009E8EA4 = {
@@ -343,11 +334,9 @@
 			files = (
 				657FC6CA1EDA820B009E8EA4 /* HPCacheImage.m in Sources */,
 				657FC6C81EDA820B009E8EA4 /* HPCache.m in Sources */,
-				653D7B991EDF02990058784A /* GifCollectionReusableView.m in Sources */,
 				657FC6821EDA7C47009E8EA4 /* ViewController.m in Sources */,
 				657FC6CC1EDA820B009E8EA4 /* HPImageCompress.m in Sources */,
 				657FC6C91EDA820B009E8EA4 /* HPCacheGif.m in Sources */,
-				653D7B9C1EDF02E40058784A /* GifCollectionViewCell.m in Sources */,
 				657FC6D61EDA91BF009E8EA4 /* HPGifCacheManage.m in Sources */,
 				657FC67F1EDA7C47009E8EA4 /* AppDelegate.m in Sources */,
 				657FC67C1EDA7C47009E8EA4 /* main.m in Sources */,
@@ -500,6 +489,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = P35S4B7K46;
 				INFOPLIST_FILE = HPGifImageView/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -512,6 +503,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = P35S4B7K46;
 				INFOPLIST_FILE = HPGifImageView/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
