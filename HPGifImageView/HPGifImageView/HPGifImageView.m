@@ -68,7 +68,7 @@
     self.displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(updateAnimationGif)];
     self.displayLink.paused = NO;
     self.displayLink.frameInterval=[self frameDelayGreatestCommonDivisor:0.03];
-    [self.displayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
+    [self.displayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
     
     [HPGifCacheManage hp_updateWithStatus:^{
         

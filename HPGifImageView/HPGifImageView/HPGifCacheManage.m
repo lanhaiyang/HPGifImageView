@@ -65,7 +65,7 @@
     }
     
     //管理缓存 缓存太大
-    dispatch_async(self.manageQueu, ^{
+    dispatch_sync(self.manageQueu, ^{
         
         NSDictionary *dic=[HPCacehObject.cacheFileInformation objectForKey:ManageSaveFile_KeyFileName_ValueFileSize];
         

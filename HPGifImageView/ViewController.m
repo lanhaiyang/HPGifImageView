@@ -21,13 +21,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-
-     HPCacheGif *cacheGif=[[HPCacheGif alloc] init];
-     [cacheGif hp_cacheWithGifName:@"runCar"];
-     
-     HPGifImageView *gifImageView=[[HPGifImageView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
-     gifImageView.cacheGif=cacheGif;
-     [self.view addSubview:gifImageView];
+    
+    HPCacheGif *cacheGif=[[HPCacheGif alloc] init];
+    [cacheGif hp_cacheWithGifName:@"runCar"];
+    
+    HPGifImageView *gifImageView=[[HPGifImageView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
+    gifImageView.cacheGif=cacheGif;
+    [self.view addSubview:gifImageView];
     
     HPCacheGif *cacheGif2=[[HPCacheGif alloc] init];
     [cacheGif2 hp_cacheWithGifName:@"kissAnimation"];
