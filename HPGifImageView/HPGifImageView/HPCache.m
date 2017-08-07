@@ -57,9 +57,9 @@
 +(void)setCacheFileTime:(NSUInteger)time
 {
     
-    BOOL cacheStatu=[HPCacehObject.cacheFileInformation objectForKey:ManageSaveIsDeletStatus];
+    id cacheStatu=[HPCacehObject.cacheFileInformation objectForKey:ManageSaveIsDeletStatus];
     
-    if (cacheStatu==NO) {
+    if (cacheStatu==nil) {
         [HPCacehObject.cacheFileInformation setInteger:[[self getNowTimeTimestamp] integerValue] forKey:ManageSaveTime];
         [HPCacehObject.cacheFileInformation setBool:YES forKey:ManageSaveIsDeletStatus];
         
