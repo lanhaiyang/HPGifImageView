@@ -494,7 +494,7 @@
 				INFOPLIST_FILE = HPGifImageView/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = hepeng.HPGifImageView;
+				PRODUCT_BUNDLE_IDENTIFIER = hepeng.HPSimpleTool;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -508,7 +508,7 @@
 				INFOPLIST_FILE = HPGifImageView/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = hepeng.HPGifImageView;
+				PRODUCT_BUNDLE_IDENTIFIER = hepeng.HPSimpleTool;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

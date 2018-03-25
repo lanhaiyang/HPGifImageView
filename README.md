@@ -4,6 +4,13 @@
 
 在加载高清gif内存表现稳定而且流畅
 
+```
+HPCache
+
+HPGifImageView
+
+```
+
 ### 加载网络获取gif
 
 ```objective-c
