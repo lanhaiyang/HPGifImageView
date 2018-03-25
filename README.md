@@ -24,3 +24,11 @@
     [self.view addSubview:gifImageView];
 
 ```
+
+<p align="center" >
+  <img src="https://github.com/lanhaiyang/HPGifImageView/blob/master/README/Result.gif" alt="效果" title="效果">
+</p>
+
+<p align="center" >
+  <img src="https://github.com/lanhaiyang/HPGifImageView/blob/master/README/Memory.gif" alt="内存" title="内存">
+</p>
