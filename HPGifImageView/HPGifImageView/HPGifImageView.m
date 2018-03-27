@@ -126,11 +126,7 @@
             self.showImage=[HPGifImageView cgImageWithShow:image];
         }
         image=nil;
-        
-        if (self.showImage==nil) {
-            [self pausedShowAnimation];
-            [self.cacheGif hp_cacheWithGifData:self.cacheGif.data];
-        }
+
         dispatch_async(dispatch_get_main_queue(), ^{
            [self.layer setNeedsDisplay];
         });
@@ -198,6 +194,10 @@
                                                  bytesPerRow,
                                                  colorspaceRef,
                                                  kCGBitmapByteOrderDefault|kCGImageAlphaNoneSkipLast);
+    
+    if (context == nil) {
+        return image;
+    }
     
     // Draw the image into the context and retrieve the new bitmap image without alpha
     CGContextDrawImage(context, CGRectMake(0, 0, width, height), imageRef);

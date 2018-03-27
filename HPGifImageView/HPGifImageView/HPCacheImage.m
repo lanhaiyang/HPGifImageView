@@ -39,13 +39,19 @@
         return;
     }
     
-    [HPCache cacheWithObj:UIImagePNGRepresentation([self compressManageImage:cacheImage]) cacheName:self.cacheName];
+    NSData *data = UIImagePNGRepresentation([self compressManageImage:cacheImage]);
+    
+    if (data == nil) {
+        return;
+    }
+    
+    [HPCache cacheWithObj:data cacheName:self.cacheName];
 
 }
 
 -(UIImage *)compressManageImage:(UIImage *)image
 {
-    return [self compressWidthImage:[self compressWidthImage:image]];
+    return [self compressWidthImage:image];
 }
 
 -(UIImage *)compressWidthImage:(UIImage *)image

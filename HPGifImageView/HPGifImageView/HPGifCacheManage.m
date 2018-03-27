@@ -140,7 +140,9 @@
 
 +(void)hp_updateWithStatus:(UpdateBlock)updateBlock
 {
-    HPGifCache.hpDateBlock=updateBlock;
+    if (updateBlock != nil) {
+        HPGifCache.hpDateBlock=updateBlock;
+    }
 }
 
 @end

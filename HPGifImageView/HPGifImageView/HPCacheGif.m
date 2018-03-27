@@ -66,6 +66,7 @@
 {
     NSURL *gifUrl=[[NSBundle mainBundle] URLForResource:gifName withExtension:@"gif"];
     NSData *data=[NSData dataWithContentsOfURL:gifUrl options:NSDataReadingMappedIfSafe error:nil];
+//    NSData *data = [NSData dataWithContentsOfURL:gifUrl];
     
     [self hp_cacheWithGifData:data];
 }
@@ -95,11 +96,9 @@
         return ;
     }
     
-    _data=data;
-    
     _cacheAnimationDic=self.cacheDictionary;
     
-    CGImageSourceRef source=CGImageSourceCreateWithData((__bridge CFDataRef)_data, NULL);
+    CGImageSourceRef source=CGImageSourceCreateWithData((__bridge CFDataRef)data, NULL);
     
     size_t count=CGImageSourceGetCount(source);
     _gifCount=count;
@@ -171,6 +170,11 @@
                      duration:(NSUInteger)duration
 {
     NSString *dataName=[NSString stringWithFormat:@"%@/%ld",cacheFile,duration];
+    
+    if (dataName == nil) {
+        return dataName;
+    }
+    
     [cacheDictionary setValue:dataName forKey:[NSString stringWithFormat:@"%ld",duration]];
     return dataName;
 }

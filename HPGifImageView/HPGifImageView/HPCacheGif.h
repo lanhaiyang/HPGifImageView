@@ -26,10 +26,6 @@
  */
 -(void)hp_cacheWithGifData:(NSData *)data;
 
-/**
- 当前gif的data
- */
-@property (nonatomic, strong, readonly) NSData *data;
 
 
 /**

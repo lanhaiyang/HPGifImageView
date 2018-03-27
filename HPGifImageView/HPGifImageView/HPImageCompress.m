@@ -144,6 +144,7 @@
     
     [sourceImage drawInRect:thumbnailRect];
     
+    
     newImage = UIGraphicsGetImageFromCurrentImageContext();
     if(newImage == nil){
         NSLog(@"scale image fail");
