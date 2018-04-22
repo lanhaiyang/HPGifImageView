@@ -51,7 +51,7 @@
 -(dispatch_queue_t)manageQueu
 {
     if (_manageQueu==nil) {
-        _manageQueu=dispatch_queue_create("HPGifCacheManage.queue.gif", DISPATCH_QUEUE_CONCURRENT);
+        _manageQueu=dispatch_queue_create("HPGifCacheManage.queue.gif", DISPATCH_QUEUE_SERIAL);
     }
     return _manageQueu;
 }

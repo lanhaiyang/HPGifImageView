@@ -5,16 +5,21 @@
 在加载高清gif内存表现稳定而且流畅
 
 ```
-HPCache
+HPCacheGif
+	|_ HPCache (缓存工具类)
+	|_ HPCacheImage (缓存图片)
+	|_ HPGifCacheManage (管理缓存)
 
 HPGifImageView
+	|_ HPCacheGif (缓存gif)
+	|_ HPGifCacheManage
+	|_ HPImageCompress (压缩)
 
 ```
 
 ### 加载网络获取gif
 
 ```objective-c
-
     HPGifImageView *gifImageVIew4=[[HPGifImageView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 200)];
     [gifImageVIew4 hp_loadAnimatedImageWithURL:[NSURL URLWithString:@"https://upload.wikimedia.org/wikipedia/commons/2/2c/Rotating_earth_%28large%29.gif"] defaultImage:nil];
     [self.view addSubview:gifImageVIew4];

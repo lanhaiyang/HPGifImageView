@@ -64,11 +64,16 @@
 
 -(void)hp_cacheWithGifName:(NSString *)gifName
 {
-    NSURL *gifUrl=[[NSBundle mainBundle] URLForResource:gifName withExtension:@"gif"];
-    NSData *data=[NSData dataWithContentsOfURL:gifUrl options:NSDataReadingMappedIfSafe error:nil];
-//    NSData *data = [NSData dataWithContentsOfURL:gifUrl];
     
-    [self hp_cacheWithGifData:data];
+    dispatch_sync(HPGifCache.manageQueu, ^{
+        
+        NSURL *gifUrl=[[NSBundle mainBundle] URLForResource:gifName withExtension:@"gif"];
+        NSData *data=[NSData dataWithContentsOfURL:gifUrl options:NSDataReadingMappedIfSafe error:nil];
+        //    NSData *data = [NSData dataWithContentsOfURL:gifUrl];
+        
+        [self hp_cacheWithGifData:data];
+    });
+    
 }
 
 -(void)hp_cacheWithGifData:( NSData *)data
@@ -82,11 +87,8 @@
 
 -(void)hp_cacheWithGifData:( NSData *)data acheFileName:(NSURL *)fileName
 {
-    dispatch_async(HPGifCache.manageQueu, ^{
-        
-        [self hp_animationGifWith:data acheFileName:fileName];
-        
-    });
+    
+    [self hp_animationGifWith:data acheFileName:fileName];
     
 }
 
@@ -118,6 +120,7 @@
     }
     else
     {
+        
         NSUInteger duration=0;
         BOOL isCreat=[HPCache creatFile:cacheName creatWithPath:[HPCache getCachePath]];
         
@@ -135,7 +138,6 @@
                                                        duration:duration];
                 HPCacheImage *cacheImage=[[HPCacheImage alloc] initWithCacehName:dataName];
                 [cacheImage setCurrentImage:image];
-                
                 CGImageRelease(imageRef);
                 
             }

@@ -43,9 +43,10 @@
     gifImageView3.cacheGif=cacheGif3;
     [self.view addSubview:gifImageView3];
     
-//     HPGifImageView *gifImageVIew4=[[HPGifImageView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 200)];
-//     [gifImageVIew4 hp_loadAnimatedImageWithURL:[NSURL URLWithString:@"https://upload.wikimedia.org/wikipedia/commons/2/2c/Rotating_earth_%28large%29.gif"] defaultImage:nil];
-//     [self.view addSubview:gifImageVIew4];
+    
+     HPGifImageView *gifImageVIew7=[[HPGifImageView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 200)];
+     [gifImageVIew7 hp_loadAnimatedImageWithURL:[NSURL URLWithString:@"https://upload.wikimedia.org/wikipedia/commons/2/2c/Rotating_earth_%28large%29.gif"] defaultImage:nil];
+     [self.view addSubview:gifImageVIew7];
 
   
 }
