@@ -65,7 +65,7 @@
 -(void)hp_cacheWithGifName:(NSString *)gifName
 {
     
-    dispatch_sync(HPGifCache.manageQueu, ^{
+    dispatch_async(HPGifCache.manageQueu, ^{
         
         NSURL *gifUrl=[[NSBundle mainBundle] URLForResource:gifName withExtension:@"gif"];
         NSData *data=[NSData dataWithContentsOfURL:gifUrl options:NSDataReadingMappedIfSafe error:nil];
