@@ -128,28 +128,30 @@
         
         for (size_t i=0; i<count; i++) {
             
-            if (isCreat==YES || cacheFileCount<count) {
+            @autoreleasepool {
                 
-                CGImageRef imageRef=CGImageSourceCreateImageAtIndex(source, i, NULL);
-                UIImage *image=[UIImage imageWithCGImage:imageRef];
+                if (isCreat==YES || cacheFileCount<count) {
+                    
+                    CGImageRef imageRef=CGImageSourceCreateImageAtIndex(source, i, NULL);
+                    UIImage *image=[UIImage imageWithCGImage:imageRef];
+                    
+                    NSString *dataName=[HPCacheGif dataNameWithFile:cacheName
+                                                      cacheDication:_cacheDictionary
+                                                           duration:duration];
+                    HPCacheImage *cacheImage=[[HPCacheImage alloc] initWithCacehName:dataName];
+                    [cacheImage setCurrentImage:image];
+                    CGImageRelease(imageRef);
+                    
+                }
+                else
+                {
+                    [HPCacheGif dataNameWithFile:cacheName
+                                   cacheDication:_cacheDictionary
+                                        duration:duration];
+                }
                 
-                NSString *dataName=[HPCacheGif dataNameWithFile:cacheName
-                                                  cacheDication:_cacheDictionary
-                                                       duration:duration];
-                HPCacheImage *cacheImage=[[HPCacheImage alloc] initWithCacehName:dataName];
-                [cacheImage setCurrentImage:image];
-                CGImageRelease(imageRef);
-                
+                duration=duration+1;
             }
-            else
-            {
-                [HPCacheGif dataNameWithFile:cacheName
-                               cacheDication:_cacheDictionary
-                                    duration:duration];
-            }
-            
-            duration=duration+1;
-            
         }
         
     }
