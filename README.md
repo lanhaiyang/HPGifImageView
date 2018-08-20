@@ -37,6 +37,8 @@ HPGifImageView
 
 ```
 
+### 注意在网页看git会有些卡顿请下载下来在模拟器运行
+
 <p align="center" >
   <img src="https://github.com/lanhaiyang/HPGifImageView/blob/master/README/Result.gif" alt="效果" title="效果">
 </p>
